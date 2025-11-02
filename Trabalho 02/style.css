@@ -1,0 +1,196 @@
+/* Container principal (macbook-pro) */
+.macbook-pro {
+    background-color: #fab44b;
+    width: 100%;
+    min-height: 100vh; /* 🔹 dá altura visível à seção */
+    position: relative;
+    overflow-x: hidden; /* evita barra horizontal */
+    overflow-y: auto; /* permite rolar se o conteúdo for maior */
+    margin: 0;
+    padding: 0;
+}
+
+/* Imagem principal do topo */
+.macbook-pro .img {
+    position: relative; /* 🔹 muda para relative para aparecer */
+    display: block;
+    width: 90vw;
+    max-width: 1600px;
+    height: auto;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+/* Faixa central */
+.macbook-pro .yellow-blue-cute-2 {
+    display: block;
+    width: 90vw;
+    max-width: 1600px;
+    height: auto;
+    margin: 5vh auto;
+    margin-top: -5px;
+    margin-bottom: -10px;
+    object-fit: cover;
+}
+
+/* Rodapé */
+.macbook-pro .yellow-blue-cute {
+    display: block;
+    width: 90vw;
+    max-width: 1600px;
+    height: auto;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+/* Container das redes sociais */
+.macbook-pro .redes {
+    position: absolute;
+    bottom: 10vh; /* distância do fundo */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; /* espaço entre ícones */
+    z-index: 10;
+}
+
+/* Ícones individuais */
+.macbook-pro .redes img {
+    width: 3vw;
+    min-width: 30px;
+    max-width: 44px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+    cursor: pointer;
+}
+
+/* --- Estilização do Botão de Chamada para Ação (CTA) --- */
+
+.macbook-pro .botao-cta {
+    /* Posicionamento */
+    position: absolute;
+    top: 55vh; /* Ajuste a posição vertical conforme necessário */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza horizontalmente */
+    z-index: 5;
+    
+    /* Aparência */
+    display: inline-block;
+    padding: 15px 40px; /* Preenchimento interno para dar tamanho */
+    
+    /* Cores e Bordas */
+    background-color: #5d98fa; /* Azul claro do botão, baseado na imagem */
+    color: white; 
+    border-radius: 30px; /* Borda bem arredondada */
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+
+    /* Tipografia */
+    font-family: 'Sniglet', sans-serif; 
+    font-size: 18px;
+    font-weight: 600; 
+    text-decoration: none;
+    text-align: center;
+    
+    /* Interação */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    margin-top: -100px;
+}
+
+.macbook-pro .botao-cta:hover {
+    background-color: #4b88e8; /* Escurece no hover */
+}
+
+/* --- Estilos do Elemento do Botão Original (Box/Boto) --- */
+/* Estes estilos foram mantidos, caso você os use para a imagem do botão */
+
+.box {
+    display: flex;
+    align-items: flex-start;
+    min-width: 450px;
+}
+
+.box .boto {
+    position: fixed;
+    height: 75px;
+    z-index: 1;
+    display: flex;
+    align-items: flex-start;
+    min-width: 450px;
+}
+
+.box .overlap-group {
+    width: 450px;
+    height: 75px;
+    position: relative;
+}
+
+.box .clip-path-group {
+    position: absolute;
+    width: 450px;
+    height: 75px;
+    top: 0;
+    left: 0;
+}
+
+.box .group {
+    position: absolute;
+    width: 364px;
+    height: 33px;
+    top: 19px;
+    left: 43px;
+}
+
+/* 🔹 Responsividade para tablets */
+@media (max-width: 1024px) {
+    .macbook-pro .yellow-blue-cute-2 {
+        margin: vh auto;
+    }
+
+    /* As regras de transformação para redes sociais foram mantidas, mas note que elas 
+       precisam de um elemento que as envolva e posicione (como a div .redes) */
+    .macbook-pro .instagram {
+        transform: translateX(-85px);
+    }
+
+    .macbook-pro .facebook {
+        transform: translateX(-20px);
+    }
+
+    .macbook-pro .whatsapp {
+        transform: translateX(45px);
+    }
+}
+
+/* 🔹 Responsividade para celulares */
+@media (max-width: 600px) {
+    .macbook-pro .img,
+    .macbook-pro .yellow-blue-cute,
+    .macbook-pro .yellow-blue-cute-2 {
+        width: 100vw;
+    }
+
+    .macbook-pro .instagram,
+    .macbook-pro .facebook,
+    .macbook-pro .whatsapp {
+        bottom: 3vh;
+        width: 9vw;
+    }
+
+    .macbook-pro .instagram {
+        transform: translateX(-70px);
+    }
+
+    .macbook-pro .facebook {
+        transform: translateX(-20px);
+    }
+
+    .macbook-pro .whatsapp {
+        transform: translateX(30px);
+    }
+}
