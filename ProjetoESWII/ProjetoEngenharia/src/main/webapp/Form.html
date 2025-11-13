@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./style.css/style.css">
+
+    <title>Cadastro de Contratos</title>
+</head>
+<body>
+    <h2 class="text-center cadastro">Cadastre o seu contrato aqui</h2>
+    <div class="content">
+        <form action="CadastrarContratos" method="post">
+            <div class="mb-3">
+                <label for="email" class="form-label">Data</label>
+                <input type="date" class="form-control" id="email" name="data"aria-describedby="emailHelp">
+            </div>
+    
+            <div class="mb-3">
+                <label for="valor" class="form-label">Valor</label>
+                <input type="number" class="form-control" id="valor" name="valor">
+            </div>
+    
+    		<div class="mb-3">
+                <label for="parcela" class="form-label">Parcela</label>
+                <input type="number" class="form-control" id="parcela" name="parcela">
+            </div>
+            
+            <a href="/ListarContratos">Listar contratos</a>
+           
+            <button type="submit" class="btn btn-primary" name="opcao" value="cadastrar">Submit</button>
+        </form>
+    </div>
+    
+</body>
+</html>
